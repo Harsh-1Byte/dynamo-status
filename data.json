@@ -1,4 +1,4 @@
-{"generated":"2026-08-29T20:36:01Z","repos":[
+{"generated":"2026-08-29T20:50:49Z","repos":[
 {
   "fork": "dynamo-10daea4-systems-infrastructure-and-operations",
   "repo": "handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations",
@@ -1459,177 +1459,27 @@
       "statusCheckRollup": [
         {
           "__typename": "CheckRun",
-          "completedAt": "2026-08-29T12:18:00Z",
+          "completedAt": "2026-08-29T20:49:34Z",
           "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99099518775",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33274459788/job/99158634668",
           "name": "review / changes",
-          "startedAt": "2026-08-29T12:17:37Z",
+          "startedAt": "2026-08-29T20:49:09Z",
           "status": "COMPLETED",
           "workflowName": "Dynamo Review"
         },
         {
           "__typename": "CheckRun",
-          "completedAt": "2026-08-29T12:20:18Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99099562004",
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33274459788/job/99158683964",
           "name": "review / cosine_similarity",
-          "startedAt": "2026-08-29T12:18:02Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T12:25:01Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99099817630",
-          "name": "review / review",
-          "startedAt": "2026-08-29T12:20:21Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T12:25:32Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99100336794",
-          "name": "review / similarity",
-          "startedAt": "2026-08-29T12:25:03Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T12:26:45Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99100399902",
-          "name": "review / validation",
-          "startedAt": "2026-08-29T12:25:35Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T12:26:54Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99100536413",
-          "name": "review / ratelimit",
-          "startedAt": "2026-08-29T12:26:47Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T13:33:07Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99100551051",
-          "name": "review / pass2",
-          "startedAt": "2026-08-29T12:26:56Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T13:33:08Z",
-          "conclusion": "SKIPPED",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99107841739",
-          "name": "review / pass2_suggestion",
-          "startedAt": "2026-08-29T13:33:08Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T13:37:27Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99107841188",
-          "name": "review / deep_review",
-          "startedAt": "2026-08-29T13:33:09Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T13:44:13Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99107841220",
-          "name": "review / ava_review",
-          "startedAt": "2026-08-29T13:33:10Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T13:44:51Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99109083671",
-          "name": "review / tier1",
-          "startedAt": "2026-08-29T13:44:15Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T14:06:51Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99109154086",
-          "name": "review / qc_eval",
-          "startedAt": "2026-08-29T13:44:53Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T13:49:31Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99109154107",
-          "name": "review / qc_exec",
-          "startedAt": "2026-08-29T13:44:53Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T14:07:07Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99111664500",
-          "name": "review / qc_gate",
-          "startedAt": "2026-08-29T14:06:53Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T15:14:40Z",
-          "conclusion": "FAILURE",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99111698344",
-          "name": "review / trials",
-          "startedAt": "2026-08-29T14:07:09Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T15:14:53Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99119444863",
-          "name": "review / gate",
-          "startedAt": "2026-08-29T15:14:42Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-29T15:14:58Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/actions/runs/33252134858/job/99119444839",
-          "name": "review / claude-cost-report",
-          "startedAt": "2026-08-29T15:14:43Z",
-          "status": "COMPLETED",
+          "startedAt": "2026-08-29T20:49:36Z",
+          "status": "IN_PROGRESS",
           "workflowName": "Dynamo Review"
         }
       ],
       "title": "Rework: address review findings (skewed-trace-forensics)",
-      "updatedAt": "2026-08-29T15:14:50Z",
+      "updatedAt": "2026-08-29T20:49:28Z",
       "url": "https://github.com/handshake-project-dynamo/dynamo-3c14fa8-systems-infrastructure-and-operations/pull/3"
     }
   ],
@@ -4655,6 +4505,74 @@
       "n": 1,
       "state": "MERGED",
       "author": "Kumar-Shantanu9"
+    }
+  ]
+}
+,
+{
+  "fork": "dynamo-c18afd3-machine-learning-and-ai",
+  "repo": "handshake-project-dynamo/dynamo-c18afd3-machine-learning-and-ai",
+  "url": "https://github.com/handshake-project-dynamo/dynamo-c18afd3-machine-learning-and-ai",
+  "prs": [
+    {
+      "author": {
+        "id": "U_kgDOCZIn3Q",
+        "is_bot": false,
+        "login": "Harsh-1Byte",
+        "name": ""
+      },
+      "createdAt": "2026-08-29T20:50:37Z",
+      "headRefName": "rework",
+      "isDraft": false,
+      "number": 6,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-29T20:51:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-c18afd3-machine-learning-and-ai/actions/runs/33274525227/job/99158807699",
+          "name": "review / changes",
+          "startedAt": "2026-08-29T20:50:44Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-c18afd3-machine-learning-and-ai/actions/runs/33274525227/job/99158852211",
+          "name": "review / cosine_similarity",
+          "startedAt": "2026-08-29T20:51:08Z",
+          "status": "IN_PROGRESS",
+          "workflowName": "Dynamo Review"
+        }
+      ],
+      "title": "Rework: pin calibration curve as unique reduced anchored interpolant (c18afd3-repair-serving-skew)",
+      "updatedAt": "2026-08-29T20:50:59Z",
+      "url": "https://github.com/handshake-project-dynamo/dynamo-c18afd3-machine-learning-and-ai/pull/6"
+    }
+  ],
+  "foreign": [
+    {
+      "n": 5,
+      "state": "CLOSED",
+      "author": "CHERUKURU-CHERISHMA"
+    },
+    {
+      "n": 3,
+      "state": "MERGED",
+      "author": "aabidhussain83"
+    },
+    {
+      "n": 2,
+      "state": "CLOSED",
+      "author": "AgentAhmed"
+    },
+    {
+      "n": 1,
+      "state": "CLOSED",
+      "author": "issac1663"
     }
   ]
 }
