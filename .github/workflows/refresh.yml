@@ -1,0 +1,52 @@
+name: Refresh board
+
+on:
+  schedule:
+    - cron: '17 * * * *'   # hourly, off the top of the hour to dodge peak queueing
+  workflow_dispatch:        # lets you refresh on demand from the Actions tab
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the token is present
+        env:
+          PAT: ${{ secrets.DYNAMO_PAT }}
+        run: |
+          if [ -z "$PAT" ]; then
+            echo "::error::Secret DYNAMO_PAT is not set. Add a fine-grained token with"
+            echo "::error::read access to Contents + Pull requests on your dynamo repos:"
+            echo "::error::Settings -> Secrets and variables -> Actions -> New repository secret"
+            exit 1
+          fi
+
+      - name: Collect status from GitHub
+        env:
+          GH_TOKEN: ${{ secrets.DYNAMO_PAT }}
+        run: ./collect.sh
+
+      - name: Rebuild the page
+        run: python3 build.py
+
+      - name: Commit and push if anything changed
+        run: |
+          if git diff --quiet -- index.html data.json; then
+            echo "No change since the last run."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html data.json
+          git commit -m "status refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+          # the local launchd agent pushes to this branch too — rebase before pushing
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
