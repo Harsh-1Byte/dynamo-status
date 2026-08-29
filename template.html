@@ -1,0 +1,275 @@
+<title>Dynamo Run Board</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ground:#F3F5F8; --surface:#FFFFFF; --surface-2:#E9EDF2; --line:#DCE1E9;
+  --ink:#131920; --ink-2:#4C5766; --ink-3:#7C8798;
+  --pass:#0F7245; --pass-bg:#D8EDE2;
+  --fail:#B62740; --fail-bg:#F8DCE1;
+  --run:#8C5900;  --run-bg:#F6E6C6;
+  --skip:#7F8996; --skip-bg:#E3E7EC;
+  --accent:#37479B;
+  --shadow:0 1px 2px rgba(19,25,32,.06), 0 6px 16px rgba(19,25,32,.05);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0C1015; --surface:#151A21; --surface-2:#1E252F; --line:#28303B;
+  --ink:#E6EAF0; --ink-2:#A3AEBC; --ink-3:#78828F;
+  --pass:#4FC98B; --pass-bg:#123122;
+  --fail:#FF7C93; --fail-bg:#3B131D;
+  --run:#E8B45C;  --run-bg:#33260E;
+  --skip:#78828F; --skip-bg:#212831;
+  --accent:#93A4F5;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 16px rgba(0,0,0,.28);
+}}
+:root[data-theme="dark"]{
+  --ground:#0C1015; --surface:#151A21; --surface-2:#1E252F; --line:#28303B;
+  --ink:#E6EAF0; --ink-2:#A3AEBC; --ink-3:#78828F;
+  --pass:#4FC98B; --pass-bg:#123122;
+  --fail:#FF7C93; --fail-bg:#3B131D;
+  --run:#E8B45C;  --run-bg:#33260E;
+  --skip:#78828F; --skip-bg:#212831;
+  --accent:#93A4F5;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 16px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:15px; line-height:1.5; -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{max-width:1180px; margin:0 auto; padding:28px 20px 72px}
+
+/* ---- masthead ---- */
+.top{display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:22px}
+h1{font-size:26px; font-weight:600; letter-spacing:-.02em; margin:0}
+.sub{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px; color:var(--ink-3); margin-top:5px}
+.sub b{color:var(--ink-2); font-weight:500}
+
+/* ---- summary tiles ---- */
+.tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:10px; margin-bottom:18px}
+.tile{
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:12px 14px; cursor:pointer; text-align:left; font:inherit; color:inherit;
+  display:flex; flex-direction:column; gap:2px; transition:border-color .12s, transform .12s;
+}
+.tile:hover{border-color:var(--ink-3)}
+.tile:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.tile[aria-pressed="true"]{border-color:currentColor; box-shadow:inset 0 0 0 1px currentColor}
+.tile .num{font-size:26px; font-weight:600; font-variant-numeric:tabular-nums; letter-spacing:-.02em; line-height:1.1}
+.tile .lbl{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3)}
+.t-fail{color:var(--fail)} .t-run{color:var(--run)} .t-pass{color:var(--pass)} .t-all{color:var(--ink-2)} .t-idle{color:var(--skip)}
+
+/* ---- controls ---- */
+.controls{display:flex; gap:10px; align-items:center; margin-bottom:16px; flex-wrap:wrap}
+input[type=search]{
+  flex:1 1 240px; min-width:200px; background:var(--surface); color:var(--ink);
+  border:1px solid var(--line); border-radius:8px; padding:9px 12px;
+  font:inherit; font-size:14px;
+}
+input[type=search]:focus{outline:2px solid var(--accent); outline-offset:-1px; border-color:transparent}
+.ghost{
+  background:var(--surface); border:1px solid var(--line); border-radius:8px;
+  color:var(--ink-2); font:inherit; font-size:13px; padding:9px 13px; cursor:pointer;
+}
+.ghost:hover{border-color:var(--ink-3); color:var(--ink)}
+.ghost:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+/* ---- rows ---- */
+.list{display:flex; flex-direction:column; gap:8px}
+.row{
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden; display:grid;
+  grid-template-columns:5px minmax(0,1fr);
+}
+.stripe{background:var(--skip)}
+.row.s-fail .stripe{background:var(--fail)}
+.row.s-running .stripe{background:var(--run)}
+.row.s-pass .stripe{background:var(--pass)}
+.body{padding:13px 16px; display:flex; flex-direction:column; gap:10px; min-width:0}
+
+.head{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; min-width:0}
+.tid{font-family:"IBM Plex Mono",monospace; font-size:13px; font-weight:600; letter-spacing:.01em}
+.tid a{text-decoration:none; border-bottom:1px solid transparent}
+.tid a:hover{border-bottom-color:var(--ink-3)}
+.cat{font-size:12px; color:var(--ink-3); text-transform:lowercase}
+.spacer{flex:1}
+.when{font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--ink-3); white-space:nowrap}
+
+.prline{display:flex; align-items:center; gap:9px; flex-wrap:wrap; min-width:0; font-size:13.5px}
+.prnum{font-family:"IBM Plex Mono",monospace; color:var(--ink-2); text-decoration:none; font-weight:500}
+.prnum:hover{color:var(--accent)}
+.prtitle{color:var(--ink-2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:100%}
+.pill{
+  font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.07em;
+  text-transform:uppercase; padding:2px 7px; border-radius:999px; white-space:nowrap;
+  background:var(--skip-bg); color:var(--skip);
+}
+.pill.open{background:var(--pass-bg); color:var(--pass)}
+.pill.merged{background:var(--surface-2); color:var(--accent)}
+.pill.gatefail{background:var(--fail-bg); color:var(--fail)}
+.pill.gatepass{background:var(--pass-bg); color:var(--pass)}
+
+/* ---- pipeline strip ---- */
+.pipe{display:flex; flex-wrap:wrap; gap:4px}
+.stage{
+  display:inline-flex; align-items:center; gap:5px; text-decoration:none;
+  font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.01em;
+  padding:3px 8px 3px 6px; border-radius:5px;
+  background:var(--surface-2); color:var(--ink-3); border:1px solid transparent;
+}
+.stage:hover{border-color:var(--ink-3)}
+.stage:focus-visible{outline:2px solid var(--accent); outline-offset:1px}
+.stage .dot{width:6px; height:6px; border-radius:50%; background:currentColor; flex:none}
+.stage.pass{background:var(--pass-bg); color:var(--pass)}
+.stage.fail{background:var(--fail-bg); color:var(--fail); font-weight:600}
+.stage.running{background:var(--run-bg); color:var(--run)}
+.stage.running .dot{animation:pulse 1.4s ease-in-out infinite}
+.stage.skip{opacity:.6}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.stage.running .dot{animation:none}}
+
+.none{font-size:13px; color:var(--ink-3); font-style:italic}
+.prior{font-size:12px; color:var(--ink-3); display:flex; gap:8px; flex-wrap:wrap}
+.prior a{font-family:"IBM Plex Mono",monospace; text-decoration:none; color:var(--ink-3)}
+.prior a:hover{color:var(--accent)}
+.empty{padding:40px; text-align:center; color:var(--ink-3)}
+.legend{margin-top:26px; font-size:12px; color:var(--ink-3); display:flex; gap:14px; flex-wrap:wrap; align-items:center}
+.legend .stage{cursor:default}
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Dynamo Run Board</h1>
+      <div class="sub">handshake-project-dynamo &middot; PRs by <b>Harsh-1Byte</b> &middot; snapshot <b id="gen"></b></div>
+    </div>
+    <button class="ghost" id="theme" type="button">Toggle theme</button>
+  </div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Filter by task id, category, branch, or PR title…" autocomplete="off">
+    <button class="ghost" id="failonly" type="button">Only stages that failed</button>
+  </div>
+
+  <div class="list" id="list"></div>
+
+  <div class="legend">
+    <span class="stage pass"><span class="dot"></span>passed</span>
+    <span class="stage fail"><span class="dot"></span>failed</span>
+    <span class="stage running"><span class="dot"></span>running</span>
+    <span class="stage skip"><span class="dot"></span>skipped</span>
+    <span>Stages are ordered as the Dynamo Review workflow runs them; click one to open its job log.</span>
+  </div>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+const rows = DATA.rows;
+document.getElementById('gen').textContent = fmt(DATA.generated);
+
+function fmt(iso){
+  const d = new Date(iso);
+  if (isNaN(d)) return iso;
+  return d.toLocaleString(undefined,{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+}
+function ago(iso){
+  const s = (Date.now() - new Date(iso)) / 1000;
+  if (s < 3600) return Math.max(1,Math.round(s/60)) + 'm ago';
+  if (s < 86400) return Math.round(s/3600) + 'h ago';
+  return Math.round(s/86400) + 'd ago';
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+const GROUPS = [
+  {k:'all',     lbl:'tasks',    cls:'t-all',  test:() => true},
+  {k:'fail',    lbl:'failing',  cls:'t-fail', test:r => r.status==='fail'},
+  {k:'running', lbl:'running',  cls:'t-run',  test:r => r.status==='running'},
+  {k:'pass',    lbl:'all green',cls:'t-pass', test:r => r.status==='pass'},
+  {k:'idle',    lbl:'no run',   cls:'t-idle', test:r => r.status==='nopr' || r.status==='nochecks'},
+];
+
+let filter = 'all', query = '', failOnly = false;
+
+const tiles = document.getElementById('tiles');
+tiles.innerHTML = GROUPS.map(g => `
+  <button class="tile ${g.cls}" type="button" data-k="${g.k}" aria-pressed="${g.k===filter}">
+    <span class="num">${rows.filter(g.test).length}</span>
+    <span class="lbl">${g.lbl}</span>
+  </button>`).join('');
+tiles.addEventListener('click', e => {
+  const b = e.target.closest('.tile'); if (!b) return;
+  filter = b.dataset.k;
+  [...tiles.children].forEach(t => t.setAttribute('aria-pressed', t.dataset.k === filter));
+  render();
+});
+
+document.getElementById('q').addEventListener('input', e => { query = e.target.value.toLowerCase().trim(); render(); });
+const fo = document.getElementById('failonly');
+fo.addEventListener('click', () => { failOnly = !failOnly; fo.setAttribute('aria-pressed', failOnly);
+  fo.style.borderColor = failOnly ? 'var(--fail)' : ''; fo.style.color = failOnly ? 'var(--fail)' : ''; render(); });
+
+document.getElementById('theme').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  const dark = cur ? cur === 'dark' : matchMedia('(prefers-color-scheme:dark)').matches;
+  document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+});
+
+function render(){
+  const g = GROUPS.find(x => x.k === filter);
+  const out = rows.filter(g.test).filter(r => {
+    if (!query) return true;
+    const hay = [r.id, r.cat, r.repo, r.pr && r.pr.t, r.pr && r.pr.branch].join(' ').toLowerCase();
+    return hay.includes(query);
+  });
+  const list = document.getElementById('list');
+  if (!out.length){ list.innerHTML = '<div class="empty">Nothing matches that filter.</div>'; return; }
+  list.innerHTML = out.map(card).join('');
+}
+
+function card(r){
+  const cls = r.status === 'fail' ? 's-fail' : r.status === 'running' ? 's-running'
+            : r.status === 'pass' ? 's-pass' : '';
+  let pr = '<div class="none">No pull request of yours here yet.</div>';
+  if (!r.pr && r.foreign && r.foreign.length){
+    pr = '<div class="none">Claimed by ' + r.foreign.map(f => esc(f.author) + ' (#' + f.n + ' ' + f.state.toLowerCase() + ')').join(', ') + ' — not your task.</div>';
+  }
+  if (r.pr){
+    const st = r.pr.state.toLowerCase();
+    const gate = r.gate === 'fail' ? '<span class="pill gatefail">gate failed</span>'
+               : r.gate === 'pass' ? '<span class="pill gatepass">gate passed</span>' : '';
+    pr = `<div class="prline">
+      <a class="prnum" href="${r.pr.url}" target="_blank" rel="noopener">#${r.pr.n}</a>
+      <span class="pill ${st}">${st}${r.pr.draft ? ' · draft' : ''}</span>
+      ${gate}
+      <span class="prtitle">${esc(r.pr.t)}</span>
+    </div>`;
+  }
+  const stages = r.stages.filter(s => !failOnly || s.s === 'fail');
+  const pipe = r.stages.length
+    ? `<div class="pipe">${stages.map(s =>
+        `<a class="stage ${s.s}" href="${s.u}" target="_blank" rel="noopener" title="${esc(s.n)} — ${s.s}"><span class="dot"></span>${esc(s.n)}</a>`
+      ).join('')}</div>`
+    : (r.pr ? '<div class="none">No workflow runs on this PR.</div>' : '');
+  const prior = r.others && r.others.length
+    ? `<div class="prior">earlier: ${r.others.map(o =>
+        `<a href="${o.url}" target="_blank" rel="noopener" title="${esc(o.t)}">#${o.n} ${o.state.toLowerCase()}</a>`).join('')}</div>`
+    : '';
+  return `<div class="row ${cls}"><div class="stripe"></div><div class="body">
+    <div class="head">
+      <span class="tid"><a href="${r.url}" target="_blank" rel="noopener">${r.id}</a></span>
+      <span class="cat">${esc(r.cat)}</span>
+      <span class="spacer"></span>
+      ${r.pr ? `<span class="when">${ago(r.pr.updated)}</span>` : ''}
+    </div>
+    ${pr}${pipe}${prior}
+  </div></div>`;
+}
+
+render();
+</script>
