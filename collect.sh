@@ -6,7 +6,7 @@ set -euo pipefail
 OUT="$(cd "$(dirname "$0")" && pwd)/data.json"
 USER=Harsh-1Byte
 
-repos=$(gh repo list "$USER" --limit 300 --json name --jq '.[].name' | grep '^dynamo-' | sort)
+repos=$(gh repo list "$USER" --limit 300 --json name --jq '.[].name' | grep '^dynamo-' | grep -vx 'dynamo-status' | sort)
 
 echo '{"generated":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'","repos":[' > "$OUT"
 first=1
