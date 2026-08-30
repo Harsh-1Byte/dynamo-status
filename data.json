@@ -1,4 +1,4 @@
-{"generated":"2026-08-30T06:23:55Z","repos":[
+{"generated":"2026-08-30T06:46:21Z","repos":[
 {
   "fork": "dynamo-10daea4-systems-infrastructure-and-operations",
   "repo": "handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations",
@@ -206,8 +206,218 @@
   "fork": "dynamo-1d80424-data-querying-and-databases",
   "repo": "handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases",
   "url": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases",
-  "prs": [],
-  "foreign": []
+  "prs": [
+    {
+      "author": {
+        "id": "U_kgDOCZIn3Q",
+        "is_bot": false,
+        "login": "Harsh-1Byte",
+        "name": ""
+      },
+      "createdAt": "2026-08-29T08:37:42Z",
+      "headRefName": "rework",
+      "isDraft": false,
+      "number": 6,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T00:57:29Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99185276576",
+          "name": "review / changes",
+          "startedAt": "2026-08-30T00:57:07Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T00:58:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99185318353",
+          "name": "review / cosine_similarity",
+          "startedAt": "2026-08-30T00:57:32Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T01:02:50Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99185447057",
+          "name": "review / review",
+          "startedAt": "2026-08-30T00:58:51Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T01:03:17Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99185897146",
+          "name": "review / similarity",
+          "startedAt": "2026-08-30T01:02:53Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T01:04:21Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99185942281",
+          "name": "review / validation",
+          "startedAt": "2026-08-30T01:03:20Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T01:04:30Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99186055282",
+          "name": "review / ratelimit",
+          "startedAt": "2026-08-30T01:04:23Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T01:50:56Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99186072979",
+          "name": "review / pass2",
+          "startedAt": "2026-08-30T01:04:33Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T01:50:56Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99190754637",
+          "name": "review / pass2_suggestion",
+          "startedAt": "2026-08-30T01:50:56Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T01:56:44Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99190754214",
+          "name": "review / deep_review",
+          "startedAt": "2026-08-30T01:50:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T01:56:51Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99190754237",
+          "name": "review / ava_review",
+          "startedAt": "2026-08-30T01:50:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T01:57:27Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99191334856",
+          "name": "review / tier1",
+          "startedAt": "2026-08-30T01:56:53Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:11:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99191394338",
+          "name": "review / qc_eval",
+          "startedAt": "2026-08-30T01:57:29Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:01:27Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99191394379",
+          "name": "review / qc_exec",
+          "startedAt": "2026-08-30T01:57:29Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:11:55Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99192889082",
+          "name": "review / qc_gate",
+          "startedAt": "2026-08-30T02:11:41Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:59:01Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99192920328",
+          "name": "review / trials",
+          "startedAt": "2026-08-30T02:11:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:59:16Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99197758625",
+          "name": "review / gate",
+          "startedAt": "2026-08-30T02:59:04Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:59:20Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/actions/runs/33284519078/job/99197758680",
+          "name": "review / claude-cost-report",
+          "startedAt": "2026-08-30T02:59:04Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        }
+      ],
+      "title": "Rework: address review findings (surge-pricing-investigation)",
+      "updatedAt": "2026-08-30T02:59:12Z",
+      "url": "https://github.com/handshake-project-dynamo/dynamo-1d80424-data-querying-and-databases/pull/6"
+    }
+  ],
+  "foreign": [
+    {
+      "n": 5,
+      "state": "CLOSED",
+      "author": "michaelturkhub"
+    },
+    {
+      "n": 4,
+      "state": "CLOSED",
+      "author": "Jsingh651"
+    },
+    {
+      "n": 2,
+      "state": "MERGED",
+      "author": "vin2075"
+    },
+    {
+      "n": 1,
+      "state": "CLOSED",
+      "author": "raviagrawal01"
+    }
+  ]
 }
 ,
 {
