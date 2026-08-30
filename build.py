@@ -57,8 +57,11 @@ for r in raw["repos"]:
         "foreign": r.get("foreign", []),
     })
 
-order = {"fail": 0, "running": 1, "nochecks": 2, "nopr": 3, "pass": 4}
-rows.sort(key=lambda r: (order[r["status"]], -(r["pr"]["n"] if r["pr"] else 0)))
+# newest activity first; repos with no PR of yours sink to the bottom
+rows.sort(key=lambda r: (r["pr"] is None, r["pr"]["updated"] if r["pr"] else ""),
+          reverse=False)
+rows.sort(key=lambda r: r["pr"]["updated"] if r["pr"] else "", reverse=True)
+rows.sort(key=lambda r: r["pr"] is None)
 
 payload = json.dumps({"generated": raw["generated"], "rows": rows},
                      separators=(",", ":"))
