@@ -1,4 +1,4 @@
-{"generated":"2026-08-30T18:29:31Z","repos":[
+{"generated":"2026-08-30T18:45:29Z","repos":[
 {
   "fork": "dynamo-10daea4-systems-infrastructure-and-operations",
   "repo": "handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations",
@@ -1870,177 +1870,27 @@
       "statusCheckRollup": [
         {
           "__typename": "CheckRun",
-          "completedAt": "2026-08-30T07:28:44Z",
+          "completedAt": "2026-08-30T18:45:38Z",
           "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99224238683",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33328964106/job/99303976719",
           "name": "review / changes",
-          "startedAt": "2026-08-30T07:28:23Z",
+          "startedAt": "2026-08-30T18:45:17Z",
           "status": "COMPLETED",
           "workflowName": "Dynamo Review"
         },
         {
           "__typename": "CheckRun",
-          "completedAt": "2026-08-30T07:30:24Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99224276487",
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33328964106/job/99304025782",
           "name": "review / cosine_similarity",
-          "startedAt": "2026-08-30T07:28:47Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T07:33:39Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99224451570",
-          "name": "review / review",
-          "startedAt": "2026-08-30T07:30:27Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T07:34:06Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99224803108",
-          "name": "review / similarity",
-          "startedAt": "2026-08-30T07:33:41Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T07:36:00Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99224849295",
-          "name": "review / validation",
-          "startedAt": "2026-08-30T07:34:08Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T07:36:10Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99225062492",
-          "name": "review / ratelimit",
-          "startedAt": "2026-08-30T07:36:03Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T08:41:44Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99225079103",
-          "name": "review / pass2",
-          "startedAt": "2026-08-30T07:36:12Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T08:41:45Z",
-          "conclusion": "SKIPPED",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99232363837",
-          "name": "review / pass2_suggestion",
-          "startedAt": "2026-08-30T08:41:45Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T08:48:11Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99232363351",
-          "name": "review / deep_review",
-          "startedAt": "2026-08-30T08:41:47Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T08:48:19Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99232363387",
-          "name": "review / ava_review",
-          "startedAt": "2026-08-30T08:41:47Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T08:48:47Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99233071329",
-          "name": "review / tier1",
-          "startedAt": "2026-08-30T08:48:21Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T09:03:39Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99233124630",
-          "name": "review / qc_eval",
-          "startedAt": "2026-08-30T08:48:49Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T09:16:02Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99233124706",
-          "name": "review / qc_exec",
-          "startedAt": "2026-08-30T08:48:50Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T09:16:19Z",
-          "conclusion": "FAILURE",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99236154428",
-          "name": "review / qc_gate",
-          "startedAt": "2026-08-30T09:16:05Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T09:16:20Z",
-          "conclusion": "SKIPPED",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99236190055",
-          "name": "review / trials",
-          "startedAt": "2026-08-30T09:16:20Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T09:16:33Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99236189398",
-          "name": "review / gate",
-          "startedAt": "2026-08-30T09:16:22Z",
-          "status": "COMPLETED",
-          "workflowName": "Dynamo Review"
-        },
-        {
-          "__typename": "CheckRun",
-          "completedAt": "2026-08-30T09:16:39Z",
-          "conclusion": "SUCCESS",
-          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/actions/runs/33299282894/job/99236189426",
-          "name": "review / claude-cost-report",
-          "startedAt": "2026-08-30T09:16:22Z",
-          "status": "COMPLETED",
+          "startedAt": "2026-08-30T18:45:40Z",
+          "status": "IN_PROGRESS",
           "workflowName": "Dynamo Review"
         }
       ],
       "title": "Rework: address review findings (cindermark-witness-parity)",
-      "updatedAt": "2026-08-30T09:16:30Z",
+      "updatedAt": "2026-08-30T18:45:33Z",
       "url": "https://github.com/handshake-project-dynamo/dynamo-4db103e-hardware-embedded-and-low-level-systems/pull/5"
     }
   ],
