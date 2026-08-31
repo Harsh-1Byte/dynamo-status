@@ -1,4 +1,4 @@
-{"generated":"2026-08-31T18:42:23Z","repos":[
+{"generated":"2026-08-31T18:58:27Z","repos":[
 {
   "fork": "dynamo-10daea4-systems-infrastructure-and-operations",
   "repo": "handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations",
@@ -1029,7 +1029,7 @@
       "headRefName": "rework",
       "isDraft": false,
       "number": 4,
-      "state": "OPEN",
+      "state": "MERGED",
       "statusCheckRollup": [
         {
           "__typename": "CheckRun",
@@ -1203,7 +1203,7 @@
         }
       ],
       "title": "Rework: address review findings (decorated-pattern-counting)",
-      "updatedAt": "2026-08-30T12:17:11Z",
+      "updatedAt": "2026-08-31T18:57:10Z",
       "url": "https://github.com/handshake-project-dynamo/dynamo-393ab81-mathematics-and-formal-reasoning/pull/4"
     }
   ],
@@ -1658,7 +1658,7 @@
       "headRefName": "rework",
       "isDraft": false,
       "number": 4,
-      "state": "OPEN",
+      "state": "MERGED",
       "statusCheckRollup": [
         {
           "__typename": "CheckRun",
@@ -1832,7 +1832,7 @@
         }
       ],
       "title": "Rework: address review findings (stateless-pricing-refactor)",
-      "updatedAt": "2026-08-30T22:45:04Z",
+      "updatedAt": "2026-08-31T18:57:28Z",
       "url": "https://github.com/handshake-project-dynamo/dynamo-3c8bf7b-software-engineering/pull/4"
     }
   ],
