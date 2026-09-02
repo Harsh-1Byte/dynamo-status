@@ -1,10 +1,205 @@
-{"generated":"2026-09-02T06:58:10Z","repos":[
+{"generated":"2026-09-02T08:31:29Z","repos":[
 {
   "fork": "dynamo-10daea4-systems-infrastructure-and-operations",
   "repo": "handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations",
   "url": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations",
-  "prs": [],
-  "foreign": []
+  "prs": [
+    {
+      "author": {
+        "id": "U_kgDOCZIn3Q",
+        "is_bot": false,
+        "login": "Harsh-1Byte",
+        "name": ""
+      },
+      "createdAt": "2026-08-28T03:57:54Z",
+      "headRefName": "rework",
+      "isDraft": false,
+      "number": 3,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:15:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99193282528",
+          "name": "review / changes",
+          "startedAt": "2026-08-30T02:15:18Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:17:30Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99193327431",
+          "name": "review / cosine_similarity",
+          "startedAt": "2026-08-30T02:15:41Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:21:01Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99193527697",
+          "name": "review / review",
+          "startedAt": "2026-08-30T02:17:32Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:21:28Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99193899890",
+          "name": "review / similarity",
+          "startedAt": "2026-08-30T02:21:04Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:23:47Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99193947038",
+          "name": "review / validation",
+          "startedAt": "2026-08-30T02:21:31Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T02:23:57Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99194189533",
+          "name": "review / ratelimit",
+          "startedAt": "2026-08-30T02:23:50Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T03:34:34Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99194206866",
+          "name": "review / pass2",
+          "startedAt": "2026-08-30T02:24:00Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T03:34:35Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99201379066",
+          "name": "review / pass2_suggestion",
+          "startedAt": "2026-08-30T03:34:35Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T03:39:45Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99201378469",
+          "name": "review / deep_review",
+          "startedAt": "2026-08-30T03:34:37Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T03:45:40Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99201378497",
+          "name": "review / ava_review",
+          "startedAt": "2026-08-30T03:34:37Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T03:46:12Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99202478109",
+          "name": "review / tier1",
+          "startedAt": "2026-08-30T03:45:43Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T03:55:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99202536167",
+          "name": "review / qc_eval",
+          "startedAt": "2026-08-30T03:46:15Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T04:00:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99202536163",
+          "name": "review / qc_exec",
+          "startedAt": "2026-08-30T03:46:15Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T04:00:56Z",
+          "conclusion": "FAILURE",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99203878907",
+          "name": "review / qc_gate",
+          "startedAt": "2026-08-30T04:00:41Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T04:00:56Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99203914602",
+          "name": "review / trials",
+          "startedAt": "2026-08-30T04:00:56Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T04:01:09Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99203914313",
+          "name": "review / gate",
+          "startedAt": "2026-08-30T04:00:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-08-30T04:01:14Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/actions/runs/33287553093/job/99203914207",
+          "name": "review / claude-cost-report",
+          "startedAt": "2026-08-30T04:00:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Dynamo Review"
+        }
+      ],
+      "title": "Rework: address review findings (rebuild-initd)",
+      "updatedAt": "2026-08-30T04:01:06Z",
+      "url": "https://github.com/handshake-project-dynamo/dynamo-10daea4-systems-infrastructure-and-operations/pull/3"
+    }
+  ],
+  "foreign": [
+    {
+      "n": 1,
+      "state": "MERGED",
+      "author": "AlexanderLasson"
+    }
+  ]
 }
 ,
 {
